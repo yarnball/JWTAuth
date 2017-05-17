@@ -9,5 +9,5 @@ Using react-router, and react-toolbox
 `npm start`
 
 # To Do
-Change to Webpack 2.
-Make a build production config
+* Change to Webpack 2.
+* Make a build config to run in production
