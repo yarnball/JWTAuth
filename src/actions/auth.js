@@ -23,7 +23,7 @@ export function loginUser({ username, password }) {
       console.log(JSON.stringify(response.data))
       // window.location.reload()
       // Don't use `browserHistory.push('/login');` as it will not 'reload' the page (ie use the setItem token above)
-      location.pathname = '/elastic'
+      location.pathname = '/dashboard'
       // console.log('this is login' + JSON.stringify(response))
     })
     .catch((error) => {
