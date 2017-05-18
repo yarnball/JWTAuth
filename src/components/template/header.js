@@ -16,28 +16,27 @@ class HeaderTemplate extends Component {
           <Link to="logout">Logout</Link>
         </li>,
       ];
-    } else {
-      return [
-        // Unauthenticated navigation
-        <li key={1}>
-          <Link to="/">Home</Link>
-        </li>,
-        <li key={2}>
-          <Link to="login">Login</Link>
-        </li>,
-        <li key={3}>
-          <Link to="register">Register</Link>
-        </li>,
-      ];
     }
+    return [
+        // Unauthenticated navigation
+      <li key={1}>
+        <Link to="/">Home</Link>
+      </li>,
+      <li key={2}>
+        <Link to="login">Login</Link>
+      </li>,
+      <li key={3}>
+        <Link to="register">Register</Link>
+      </li>,
+    ];
   }
 
   render() {
     return (
       <div>
-              <ul>
-                {this.renderLinks()}
-              </ul>
+        <ul>
+          {this.renderLinks()}
+        </ul>
       </div>
     );
   }

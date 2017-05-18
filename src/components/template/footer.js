@@ -11,7 +11,7 @@ class FooterTemplate extends Component {
       <footer className="footer">
           footer zone
       </footer>
-                  
+
     );
   }
 }

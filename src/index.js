@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, browserHistory } from 'react-router';
 import reduxThunk from 'redux-thunk';
-import cookie from 'react-cookie';
+// import cookie from 'react-cookie';
 import routes from './routes';
 import reducers from './reducers/index';
 import ReactGA from 'react-ga';
@@ -23,15 +23,15 @@ function logPageView() {
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 const store = createStoreWithMiddleware(reducers);
 
-const token = cookie.load('token');
+// const token = cookie.load('token');
 
-if (token) {
-  // Update application state. User has token and is probably authenticated
-  store.dispatch({ type: AUTH_USER });
-}
+// if (token) {
+//   // Update application state. User has token and is probably authenticated
+//   store.dispatch({ type: AUTH_USER });
+// }
 
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory} routes={routes} onUpdate={logPageView} />
   </Provider>,
-  document.querySelector('.wrapper'));
+  document.getElementById('main'));

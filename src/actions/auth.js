@@ -17,13 +17,13 @@ export function loginUser({ username, password }) {
       cookie.save('user', response.data.user, { path: '/' });
       cookie.save('dtoken', response.data.dtoken, { path: '/' });
       dispatch({ type: AUTH_USER });
-      localStorage.setItem('token', response.data.token)
-      localStorage.setItem('user', response.data.user)
-      console.log('token')
-      console.log(JSON.stringify(response.data))
+      localStorage.setItem('token', response.data.token);
+      localStorage.setItem('user', response.data.user);
+      console.log('token');
+      console.log(JSON.stringify(response.data));
       // window.location.reload()
       // Don't use `browserHistory.push('/login');` as it will not 'reload' the page (ie use the setItem token above)
-      location.pathname = '/dashboard'
+      location.pathname = '/dashboard';
       // console.log('this is login' + JSON.stringify(response))
     })
     .catch((error) => {
@@ -55,7 +55,7 @@ export function logoutUser(error) {
     cookie.remove('user', { path: '/' });
     cookie.remove('dtoken', { path: '/' });
     localStorage.removeItem('token');
-    localStorage.removeItem('user')
+    localStorage.removeItem('user');
 
     window.location.href = `${CLIENT_ROOT_URL}/login`;
   };
