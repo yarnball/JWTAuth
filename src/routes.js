@@ -33,7 +33,7 @@ export default (
     <Route path="reset-password/:resetToken" component={ResetPassword} />
     <Route path="dashboard">
       <IndexRoute component={RequireAuth(Dashboard)} />
-      </Route>
+    </Route>
 
     <Route path="*" component={NotFoundPage} />
   </Route>

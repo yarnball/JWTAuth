@@ -9,7 +9,7 @@ class App extends Component {
         <HeaderTemplate logo="Your Site" />
 
         <div className="container">
-         <Button label="Hello World!" />
+          <Button label="Hello World!" />
           {this.props.children}
         </div>
 

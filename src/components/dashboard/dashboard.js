@@ -6,7 +6,7 @@ import cookie from 'react-cookie';
 class Dashboard extends Component {
   render() {
     return (
-    	<div>
+      <div>
 					Dashboard
 			</div>
     );
